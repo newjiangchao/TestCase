@@ -44,3 +44,6 @@ todo
 ```
 todo
 ```
+
+### 自动化测试结果总结：
+1、各别币种汇率转换后的currency_pair字段值buy_currency和sell_currency拼接字符串的前后顺序不一致。

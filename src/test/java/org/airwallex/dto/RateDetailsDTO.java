@@ -1,4 +1,4 @@
-package org.airwallex.demo;
+package org.airwallex.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

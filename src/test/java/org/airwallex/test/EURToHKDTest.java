@@ -6,7 +6,7 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
-import org.airwallex.demo.ResponseBodyDTO;
+import org.airwallex.dto.ResponseBodyDTO;
 import org.airwallex.utils.CommonUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
