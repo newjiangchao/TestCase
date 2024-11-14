@@ -15,7 +15,7 @@ import java.math.RoundingMode;
 
 public class USDToCNYTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "USD to CNY positive test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of US dollars exchanged for 100 CNY")
     public void USDToCNYTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

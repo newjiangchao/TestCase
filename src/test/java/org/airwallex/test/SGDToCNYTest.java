@@ -15,7 +15,7 @@ import java.math.RoundingMode;
 
 public class SGDToCNYTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "SGD to CNY test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of SGD exchanged for 100 CNY")
     public void SGDToCNYTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

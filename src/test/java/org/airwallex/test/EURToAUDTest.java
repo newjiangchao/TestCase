@@ -16,7 +16,7 @@ import java.math.RoundingMode;
 
 public class EURToAUDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "EUR to AUD test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of EUR exchanged for 100 Australian dollars")
     public void EURToAUDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -58,7 +58,7 @@ public class EURToAUDTest {
 
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to AUD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to AUD buy_amount is zero test")
     public void EURToAUDTestCase2() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -82,7 +82,7 @@ public class EURToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_parameter", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to AUD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to AUD buy_amount is 0.01 test")
     public void EURToAUDTestCase3() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -107,7 +107,7 @@ public class EURToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "validation_error", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to AUD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to AUD buy_amount is empty string test")
     public void EURToAUDTestCase4() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -148,7 +148,7 @@ public class EURToAUDTest {
         Assert.assertEquals(responseBody.getSellCurrency(), sellCurrency, "出售货币类型");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to AUD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to AUD sell_currency is empty string test")
     public void EURToAUDTestCase5() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -173,7 +173,7 @@ public class EURToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to AUD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to AUD buy_currency is empty string test")
     public void EURToAUDTestCase6() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

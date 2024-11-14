@@ -16,7 +16,7 @@ import java.math.RoundingMode;
 
 public class EURToHKDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "EUR to HKD test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of EUR exchanged for 100 HKD")
     public void EURToHKDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -58,7 +58,7 @@ public class EURToHKDTest {
 
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to HKD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to HKD buy_amount is zero test")
     public void EURToHKDTestCase2() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -82,7 +82,7 @@ public class EURToHKDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_parameter", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to HKD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to HKD buy_amount is 0.01 test")
     public void EURToHKDTestCase3() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -107,7 +107,7 @@ public class EURToHKDTest {
         Assert.assertEquals(responseBody.get("code"), "validation_error", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to HKD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to HKD buy_amount is empty string test")
     public void EURToHKDTestCase4() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -148,7 +148,7 @@ public class EURToHKDTest {
         Assert.assertEquals(responseBody.getSellCurrency(), sellCurrency, "出售货币类型");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to HKD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to HKD sell_currency is empty string test")
     public void EURToHKDTestCase5() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -173,7 +173,7 @@ public class EURToHKDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to HKD negative test")
+    @Test(groups = {"negative"}, testName = "EUR to HKD buy_currency is empty string test")
     public void EURToHKDTestCase6() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

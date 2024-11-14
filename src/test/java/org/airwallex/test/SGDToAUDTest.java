@@ -16,7 +16,7 @@ import java.math.RoundingMode;
 
 public class SGDToAUDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "SGD to AUD test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of SGD exchanged for 100 Australian dollars")
     public void SGDToAUDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -58,7 +58,7 @@ public class SGDToAUDTest {
 
     }
 
-    @Test(groups = {"Negative"}, testName = "SGD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "SGD to AUD buy_amount is zero test")
     public void SGDToAUDTestCase2() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -82,7 +82,7 @@ public class SGDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_parameter", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "SGD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "SGD to AUD buy_amount is 0.01 test")
     public void SGDToAUDTestCase3() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -107,7 +107,7 @@ public class SGDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "validation_error", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "SGD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "SGD to AUD buy_amount is empty string test")
     public void SGDToAUDTestCase4() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -148,7 +148,7 @@ public class SGDToAUDTest {
         Assert.assertEquals(responseBody.getSellCurrency(), sellCurrency, "出售货币类型");
     }
 
-    @Test(groups = {"Negative"}, testName = "SGD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "SGD to AUD sell_currency is empty string test")
     public void SGDToAUDTestCase5() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -173,7 +173,7 @@ public class SGDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "SGD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "SGD to AUD buy_currency is empty string test")
     public void SGDToAUDTestCase6() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

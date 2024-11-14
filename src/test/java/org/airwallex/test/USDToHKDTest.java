@@ -15,7 +15,7 @@ import java.math.RoundingMode;
 
 public class USDToHKDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "USD to HKD positive test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of US dollars exchanged for 100 HKD")
     public void USDToHKDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

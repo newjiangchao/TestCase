@@ -16,7 +16,7 @@ import java.math.RoundingMode;
 
 public class EURToCNYTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "EUR to CNY test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of EUR exchanged for 100 CNY")
     public void EURToCNYTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -58,7 +58,7 @@ public class EURToCNYTest {
 
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to CNY negative test")
+    @Test(groups = {"negative"}, testName = "EUR to CNY buy_amount is zero test")
     public void EURToCNYTestCase2() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -82,7 +82,7 @@ public class EURToCNYTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_parameter", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to CNY negative test")
+    @Test(groups = {"negative"}, testName = "EUR to CNY buy_amount is 0.01 test")
     public void EURToCNYTestCase3() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -107,7 +107,7 @@ public class EURToCNYTest {
         Assert.assertEquals(responseBody.get("code"), "validation_error", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to CNY negative test")
+    @Test(groups = {"negative"}, testName = "EUR to CNY buy_amount is empty string test")
     public void EURToCNYTestCase4() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -148,7 +148,7 @@ public class EURToCNYTest {
         Assert.assertEquals(responseBody.getSellCurrency(), sellCurrency, "出售货币类型");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to CNY negative test")
+    @Test(groups = {"negative"}, testName = "EUR to CNY sell_currency is empty string test")
     public void EURToCNYTestCase5() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -173,7 +173,7 @@ public class EURToCNYTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "EUR to CNY negative test")
+    @Test(groups = {"negative"}, testName = "EUR to CNY buy_currency is empty string test")
     public void EURToCNYTestCase6() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

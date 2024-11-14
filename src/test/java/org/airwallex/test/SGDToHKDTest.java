@@ -15,7 +15,7 @@ import java.math.RoundingMode;
 
 public class SGDToHKDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "SGD to HKD test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of SGD exchanged for 100 HKD")
     public void SGDToHKDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型

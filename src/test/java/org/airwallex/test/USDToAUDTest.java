@@ -17,7 +17,7 @@ import java.math.RoundingMode;
 
 public class USDToAUDTest {
 
-    @Test(groups = {"smoke", "positive"}, testName = "USD to AUD positive test")
+    @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of US dollars exchanged for 100 Australian dollars")
     public void USDToAUDTestCase1() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -59,7 +59,7 @@ public class USDToAUDTest {
 
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD buy_amount is zero test")
     public void USDToAUDTestCase2() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -83,7 +83,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_parameter", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD buy_amount is 0.01 test")
     public void USDToAUDTestCase3() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -108,7 +108,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "validation_error", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD buy_amount is empty string test")
     public void USDToAUDTestCase4() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -149,7 +149,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.getSellCurrency(), sellCurrency, "出售货币类型");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD sell_currency is empty string test")
     public void USDToAUDTestCase5() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -174,7 +174,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD buy_currency is empty string test")
     public void USDToAUDTestCase6() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -199,7 +199,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD sell_currency is Illegal string test")
     public void USDToAUDTestCase7() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -224,7 +224,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"Negative"}, testName = "USD to AUD negative test")
+    @Test(groups = {"negative"}, testName = "USD to AUD buy_currency is Illegal string test")
     public void USDToAUDTestCase8() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
@@ -249,7 +249,7 @@ public class USDToAUDTest {
         Assert.assertEquals(responseBody.get("code"), "invalid_argument", "返回码");
     }
 
-    @Test(groups = {"smoke", "positive"}, testName = "USD to AUD positive test")
+    @Test(groups = {"negative"}, testName = "USD to AUD large exchange rate conversion test")
     public void USDToAUDTestCase9() {
         String token = CommonUtils.getLoginToken();
         // 出售的货币类型
