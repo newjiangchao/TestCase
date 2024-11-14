@@ -34,6 +34,7 @@ USDToAUDTestCase8：USD兑换AUD反例，购买的货币类型传非法值
 USDToAUDTestCase9：USD兑换AUD反例，大额转换
 USDToAUDTestCase10：USD兑换AUD正例，购买的货币金额为999.99
 USDToAUDTestCase11：USD兑换AUD正例，购买的货币金额为1000.01
+USDToAUDTestCase12: USD兑换AUD正例，购买的货币金额为999.999
 其它测试用例：和上述测试场景类似，只是参数不同，测试结果也类似。无需一一列举。
 ```
 
