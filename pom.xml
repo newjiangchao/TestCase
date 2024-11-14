@@ -64,41 +64,6 @@
 
     </dependencies>
 
-    <!--    <build>-->
-    <!--        <plugins>-->
-    <!--            <plugin>-->
-    <!--                <groupId>org.springframework.boot</groupId>-->
-    <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-    <!--            </plugin>-->
-    <!--            <plugin>-->
-    <!--                <groupId>org.apache.maven.plugins</groupId>-->
-    <!--                <artifactId>maven-compiler-plugin</artifactId>-->
-    <!--                <configuration>-->
-    <!--                    <source>1.8</source>-->
-    <!--                    <target>1.8</target>-->
-    <!--                </configuration>-->
-    <!--            </plugin>-->
-    <!--            &lt;!&ndash; Allure Maven 插件，用于生成报告 &ndash;&gt;-->
-    <!--            <plugin>-->
-    <!--                <groupId>io.qameta.allure</groupId>-->
-    <!--                <artifactId>allure-maven</artifactId>-->
-    <!--                <version>2.10.0</version>-->
-    <!--                <executions>-->
-    <!--                    <execution>-->
-    <!--                        <goals>-->
-    <!--                            <goal>serve</goal>-->
-    <!--                        </goals>-->
-    <!--                    </execution>-->
-    <!--                </executions>-->
-    <!--                <configuration>-->
-    <!--                    <reportVersion>2.15.0</reportVersion>-->
-    <!--                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>-->
-    <!--                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory>-->
-    <!--                </configuration>-->
-    <!--            </plugin>-->
-    <!--        </plugins>-->
-    <!--    </build>-->
-
     <build>
         <plugins>
             <!-- Maven Surefire Plugin 用于执行测试 -->
