@@ -52,5 +52,7 @@ todo
 ```
 
 ### 自动化测试结果总结：
+```
 1、各别币种汇率转换后的currency_pair字段值buy_currency和sell_currency拼接字符串的前后顺序不一致。
 2、USDToAUDTestCase4测试案例中不传购买额度的情况下，默认转10000澳元的原因是什么？
+```
