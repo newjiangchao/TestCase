@@ -4,10 +4,13 @@
 
 ### 测试执行
 ```
-1、执行所有测试用例
+1、进入项目目录下
+cd /Users/jiangchao/Downloads/Spring Boot/TestCase
+
+2、执行所有测试用例
 mvn clean test -Dspring.profiles.active=test -Dsurefire.suiteXmlFiles=src/test/java/org/airwallex/test/TestCaseRun.xml
 
-2、只执行冒烟测试案例
+3、只执行冒烟测试案例
 mvn clean test -Dspring.profiles.active=test -Dsurefire.suiteXmlFiles=src/test/java/org/airwallex/test/TestCaseSmokeRun.xml
 ```
 
@@ -20,7 +23,7 @@ brew install allure
 allure --version
 
 3. 可以直接创建allure服务查看
-allure serve allure-results
+allure serve target/allure-results
 ```
 
 ### 测试用例描述
