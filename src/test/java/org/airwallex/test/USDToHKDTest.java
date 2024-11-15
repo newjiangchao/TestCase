@@ -5,15 +5,19 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
+import org.airwallex.Application;
 import org.airwallex.dto.ResponseBodyDTO;
 import org.airwallex.utils.CommonUtils;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class USDToHKDTest {
+@SpringBootTest(classes = Application.class)
+public class USDToHKDTest extends AbstractTestNGSpringContextTests {
 
     @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of US dollars exchanged for 100 HKD")
     public void USDToHKDTestCase1() {
