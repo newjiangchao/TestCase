@@ -6,19 +6,15 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
-import org.airwallex.Application;
 import org.airwallex.dto.ResponseBodyDTO;
 import org.airwallex.utils.CommonUtils;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-@SpringBootTest(classes = Application.class)
-public class SGDToAUDTest extends AbstractTestNGSpringContextTests {
+public class SGDToAUDTest  {
 
     @Test(groups = {"smoke", "positive"}, testName = "Determine the amount of SGD exchanged for 100 Australian dollars")
     public void SGDToAUDTestCase1() {
