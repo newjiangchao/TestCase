@@ -6,6 +6,7 @@
     <test verbose="1" name="AirwallexAllTests">
         <classes>
             <!-- 可以多个 -->
+            <class name="org.airwallex.test.TestSetup"/>
             <class name="org.airwallex.test.EURToAUDTest"/>
             <class name="org.airwallex.test.EURToCNYTest"/>
             <class name="org.airwallex.test.EURToHKDTest"/>
